@@ -1,123 +1,144 @@
+import React from "react";
 import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
-import Button from "./Button"
+import { Link } from "react-router-dom";
 
 const Footer = () => {
-    return (
-        <footer className="text-white py-20 bg_gradient ">
-            <div className="container mx-auto px-20 lg:px-20 py-20 flex flex-col gap-10 md:flex-row justify-between border-t border-slate-800">
-                <div className="flex">
-                    <p className="font-bold text-center">
-                        Recipe<span className="text-green-500 text-xl">Finder</span>
-                    </p>
-                </div>
+  return (
+    <footer className="text-white py-20 bg_gradient">
+      <div className="container mx-auto px-6 lg:px-20 py-20 flex flex-col gap-10 md:flex-row justify-between border-t border-slate-800">
+        {/* Logo */}
+        <div>
+          <p className="font-bold text-center md:text-left text-xl">
+            Recipe<span className="text-green-500">Finder</span>
+          </p>
+        </div>
 
-                <div className="">
-                    <p>QUICK LINKS</p>
+        {/* Quick Links */}
+        <div>
+          <p className="font-semibold mb-3">QUICK LINKS</p>
 
-                    <div className="flex flex-col text-start mb-4 md:mb-0">
-                        <a
-                            href='#'
-                            className='block md:inline-block py-2 hover:text-gray-500'
-                        >
-                            Home
-                        </a>
-                        <a
-                            href='#'
-                            className='block md:inline-block py-2 hover:text-gray-500'
-                        >
-                            About
-                        </a>
-                        <a
-                            href='#'
-                            className='block md:inline-block py-2 hover:text-gray-500'
-                        >
-                            Services
-                        </a>
-                        <a
-                            href='#'
-                            className='block md:inline-block py-2 hover:text-gray-500'
-                        >
-                            Contact
-                        </a>
-                        <a
-                            href='#'
-                            className='block md:inline-block py-2 hover:text-gray-500'
-                        >
-                            Chiefs
-                        </a>
-                    </div>
-                </div>
+          <div className="flex flex-col text-start">
+            <Link
+              to="/"
+              className="py-2 hover:text-gray-400 transition"
+            >
+              Home
+            </Link>
 
-                <div>
-                    <p>LEGAL</p>
-                    <div className='flex flex-col text-start mb-4 md:mb-0 text-[14px]'>
-                        <a
-                            href='#'
-                            className='block md:inline-block py-2 hover:text-gray-500'
-                        >
-                            Terms and Conditions
-                        </a>
-                        <a
-                            href='#'
-                            className='block md:inline-block py-2 hover:text-gray-500'
-                        >
-                            License Agreement
-                        </a>
-                        <a
-                            href='#'
-                            className='block md:inline-block py-2 hover:text-gray-500'
-                        >
-                            Privacy Policy
-                        </a>
-                        <a
-                            href='#'
-                            className='block md:inline-block py-2 hover:text-gray-500'
-                        >
-                            Copyright Information
-                        </a>
-                        <a
-                            href='#'
-                            className='block md:inline-block py-2 hover:text-gray-500'
-                        >
-                            Cookies Policy
-                        </a>
-                    </div>
-                </div>
+            <Link
+              to="/recipes"
+              className="py-2 hover:text-gray-400 transition"
+            >
+              Recipes
+            </Link>
 
-                <div className="flex flex-col">
-                    <p>SOCIAL MEDIA</p>
-                    <div className="flex mt-4 gap-3">
-                        <a
-                            href='#'
-                            className='bg-blue-600 p-1.5 rounded-sm text-white hover:text-gray-500 hover:scale-110'
-                        >
-                            <FaFacebook size={18} />
-                        </a>
+            <Link
+              to="/contact"
+              className="py-2 hover:text-gray-400 transition"
+            >
+              Contact
+            </Link>
 
-                        <a
-                            href='#'
-                            className='bg-pink-600 p-1.5 rounded-sm text-white hover:text-gray-500 hover:scale-110'
-                        >
-                            <FaInstagram size={18} />
-                        </a>
-                        <a
-                            href='#'
-                            className='bg-blue-600 p-1.5 rounded-sm text-white hover:text-gray-500 hover:scale-110'
-                        >
-                            <FaTwitter size={18} />
-                        </a>
-                        <a
-                            href='#'
-                            className='bg-red-600 p-1.5 rounded-sm text-white hover:scale-110'
-                        >
-                            <FaYoutube size={18} />
-                        </a>
-                    </div>
-                </div>
-            </div>
+            <Link
+              to="/"
+              className="py-2 hover:text-gray-400 transition"
+            >
+              Chefs
+            </Link>
+          </div>
+        </div>
 
-        </footer>
-    )
-}
+        {/* Legal */}
+        <div>
+          <p className="font-semibold mb-3">LEGAL</p>
 
-export default Footer
+          <div className="flex flex-col text-start text-sm">
+            <Link
+              to="/"
+              className="py-2 hover:text-gray-400 transition"
+            >
+              Terms and Conditions
+            </Link>
+
+            <Link
+              to="/"
+              className="py-2 hover:text-gray-400 transition"
+            >
+              License Agreement
+            </Link>
+
+            <Link
+              to="/"
+              className="py-2 hover:text-gray-400 transition"
+            >
+              Privacy Policy
+            </Link>
+
+            <Link
+              to="/"
+              className="py-2 hover:text-gray-400 transition"
+            >
+              Copyright Information
+            </Link>
+
+            <Link
+              to="/"
+              className="py-2 hover:text-gray-400 transition"
+            >
+              Cookies Policy
+            </Link>
+          </div>
+        </div>
+
+        {/* Social Media */}
+        <div>
+          <p className="font-semibold mb-3">SOCIAL MEDIA</p>
+
+          <div className="flex mt-4 gap-3">
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="bg-blue-600 p-2 rounded-sm hover:scale-110 transition"
+            >
+              <FaFacebook size={18} />
+            </a>
+
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="bg-pink-600 p-2 rounded-sm hover:scale-110 transition"
+            >
+              <FaInstagram size={18} />
+            </a>
+
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter"
+              className="bg-sky-500 p-2 rounded-sm hover:scale-110 transition"
+            >
+              <FaTwitter size={18} />
+            </a>
+
+            <a
+              href="https://youtube.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="YouTube"
+              className="bg-red-600 p-2 rounded-sm hover:scale-110 transition"
+            >
+              <FaYoutube size={18} />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
