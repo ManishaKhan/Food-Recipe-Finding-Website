@@ -1,0 +1,143 @@
+.recipe-detail {
+  max-width: 1000px;
+  margin: 40px auto;
+  /* padding: 0 20px; */
+  padding: 50px 20px;
+}
+
+.back-button {
+  display: inline-block;
+  margin-bottom: 24px;
+  text-decoration: none;
+  color: #ff6b35;
+  font-weight: 600;
+}
+
+/* .recipe-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 40px;
+} */
+
+.recipe-hero {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+/* .detail-image {
+  width: 100%;
+  border-radius: 20px;
+} */
+
+.detail-image {
+  width: 100%;
+  max-width: 420px;
+  /* height: 420px;
+  object-fit: cover; */
+  border-radius: 20px;
+}
+
+.detail-info h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+
+.detail-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-info h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.ingredients-section {
+  margin-top: 30px;
+}
+
+.ingredients-section ul {
+  columns: 2;
+  column-gap: 30px;
+  padding-left: 20px;
+}
+
+.ingredients-section li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.instructions-section{
+  margin: 20px;
+}
+
+.recipeDeatilsHeader{
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-decoration: underline;
+}
+
+.youtube-button {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #ff0000;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.loading {
+  text-align: center;
+  padding: 60px;
+  font-size: 1.2rem;
+}
+
+/* .recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  padding: 20px;
+} */
+
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(250px, 1fr));
+  gap: 28px;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Tablet */
+@media (max-width: 1200px) {
+  .recipes-grid {
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+  }
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .recipes-grid {
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .recipes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .recipe-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-info h1 {
+    font-size: 2rem;
+  }
+}

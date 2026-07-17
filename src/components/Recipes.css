@@ -1,0 +1,39 @@
+
+/* .recipe-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+} */
+
+
+
+
+.pagination{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  margin:40px 0;
+}
+
+
+.pagination button{
+  border:none;
+  padding:10px 16px;
+  border-radius:10px;
+  cursor:pointer;
+  background:#eee;
+  font-weight:600;
+}
+
+
+.pagination button:hover,
+.active-page{
+  background:#ff6b35 !important;
+  color:white;
+}
+
+
+.pagination button:disabled{
+  opacity:.5;
+  cursor:not-allowed;
+}
