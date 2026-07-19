@@ -1,33 +1,4 @@
 
-// import React from 'react';
-// import { Link } from 'react-router-dom';
-// import './RecipeCard.css';
-
-// const RecipeCard = ({ recipe }) => {
-//   return (
-//     <div className="recipe-card">
-//       <Link to={`/recipe/${recipe.idMeal}`} className="recipe-link">
-//         <img
-//           src={recipe.strMealThumb}
-//           alt={recipe.strMeal}
-//           className="recipe-image"
-//         />
-
-//         <div className="recipe-content">
-//           <h3 className="recipe-title">{recipe.strMeal}</h3>
-
-//           <p className="recipe-category">
-//             {recipe.strCategory}
-//           </p>
-//         </div>
-//       </Link>
-//     </div>
-//   );
-// };
-
-// export default RecipeCard;
-
-
 import React from "react";
 import { Link } from "react-router-dom";
 import "./RecipeCard.css";
@@ -47,14 +18,15 @@ const RecipeCard = ({ recipe }) => {
           {/* <span className="category-badge">
             {recipe.strCategory}
           </span> */}
+         
+        </div>
 
+        <div className="recipe-content">
+          
           <button className="view-btn">
             View Recipe →
           </button>
           
-        </div>
-
-        <div className="recipe-content">
           <h3 className="recipe-title">
             {recipe.strMeal}
           </h3>
